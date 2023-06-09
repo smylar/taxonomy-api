@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>dna_taxonomy_api</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'taxonomy_api' " />
+  <ItemGroup>
+    <None Remove="GraphQL" />
+    <None Remove="GraphQL.Server.Transports.AspNetCore" />
+    <None Remove="Graphql\" />
+    <None Remove="Repository\" />
+    <None Remove="RestSharp" />
+    <None Remove="AutoMapper" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Microsoft.ApplicationInsights.AspNetCore" />
+    <None Remove="Health\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Graphql\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Health\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GraphQL" Version="7.1.1" />
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="7.1.1" />
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DNA.API.Taxonomy.Domain\DNA.API.Taxonomy.Domain.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxonomy.Domain\Taxonomy.Domain.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

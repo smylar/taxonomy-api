@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:2485",
+      "sslPort": 44318
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "weatherforecast",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "taxonomy_api": {
+      "commandName": "Project",
+      "applicationUrl": "https://localhost:7015;http://localhost:5063",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "FROST_USER": "xxx",
+        "FROST_PASS": "xxx",
+        "FROST_ORG": "xxx",
+        "FROST_URL": "https://api.unifiedfrost-stage.learningmate.co/server/api/",
+        "FROST_TOKEN_URL": "https://unifiedfrost-stage.learningmate.co/oauth/connect/token",
+        "INDEX_ID": "9e8289f1-3696-4273-b4d7-90a5d262307e",
+        "API_KEY": "1234"
+      }
+    }
+  }
+}
